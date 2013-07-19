@@ -1,0 +1,65 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://www.dosomething.org/"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "div#block-menu-block-1.block div.content div.menu-block-wrapper ul.menu li.menu-mlid-93591 a"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "I Heart Dad"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "nav div.region div#block-menu-block-1.block div.content div.menu-block-wrapper ul.menu li.expanded ul.menu li.menu-mlid-112615 a"
+      }
+    },
+    {
+      "type": "verifyElementPresent",
+      "locator": {
+        "type": "id",
+        "value": "edit-submitted-field-webform-email-und-0-email"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-submitted-field-webform-email-und-0-email"
+      },
+      "text": "mattholford+saucetest@outlook.com"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//html/body"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "edit-submit"
+      }
+    },
+    {
+      "type": "verifyElementPresent",
+      "locator": {
+        "type": "id",
+        "value": "edit-title-text"
+      }
+    }
+  ]
+}
